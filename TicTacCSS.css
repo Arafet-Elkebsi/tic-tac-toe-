@@ -1,0 +1,120 @@
+*{
+    color: aliceblue;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+body {
+    background: rgb(23, 23, 65);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+.turn-container{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+.turn-container h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.turn-container .turn-box{
+    border: 3px solid #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
+}
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #FF2E63;
+    z-index: -1;
+}
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 240px;
+    width: 240px;
+    margin: 30px auto;
+    border: 2px solid #000;
+}
+.box{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #000;
+    background-color: transparent;
+}
+.box:hover {
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(73, 73, 73));
+}
+#play-again{
+    background-color: #000000;
+    padding: 10px 10px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; 
+}
+#play-again:hover{
+    padding: 10px 40px;
+    background-color: #08D9D6;
+    color: #000;
+}
+/* score */
+.score-display {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 40px 40px;
+    width: 200px;
+    height: 80px;
+    margin: 25px;
+    border: 1px solid white;
+    background-color: #4e0455; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: 10%;
+    top :2%;
+}
+.score-display .wordScore {
+    grid-column: span 2;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+.score-display .areaScore {
+    display: grid;
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 100px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    background-color: transparent; /* Tomato color */
+    color: #FFF;
+}
