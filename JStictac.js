@@ -5,6 +5,7 @@ let isGameOver = false;
 //var scoreO = 0;
 //var scoreX = 0;
 let xscr = document.getElementById("xscr");
+
 let oscr = document.getElementById("oscr");
 //data
 let scoreX = parseInt(localStorage.getItem('scoreX')) || 0;
